@@ -1,4 +1,4 @@
-This first note covers the most simple of demand structures: linear demand. Credit for thise original 
+This first note covers the most simple of demand structures: linear demand. Credit for this section goes to [Davis(2006)](https://www.biicl.org/files/2757_peter_davis_-_coordinated_effects_merger_simulation_with_linear_demands.pdf).
 ### Model Setup
 The demand for good $k \in \{1, \dots, J\} \equiv \mathcal{J} $ demand is written as a linear function of the prices of all the goods in the market: 
 ```math
@@ -9,7 +9,6 @@ D_k(p_1, \dots, p_N) =
 \end{cases}
 ```
 with demand intercept parameter $a_k$ and slope parameter $b_{ij}$ describing the change in demand for product $k$ when good $j$'s price increases by 1 unit. 
-ADD SOMETHING ABOUT THE COSTS
 ### Analysis
 
 ```python
