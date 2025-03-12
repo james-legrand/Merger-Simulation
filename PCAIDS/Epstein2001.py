@@ -157,7 +157,7 @@ def plot_results(ax, results_key, title, ylabel, ylim, firms, colors):
                 [results[results_key][gain][idx] for gain in efficiency_gain_values], 
                 label=firm, color=colors[idx])
     ax.set_title(title)
-    ax.set_xlabel('Efficiency Gains')
+    ax.set_xlabel('Cost Change (γ)')
     ax.set_ylabel(ylabel)
     ax.set_ylim(*ylim)
     ax.axvline(x=0, color='black', linestyle='--', alpha=0.25)
@@ -169,9 +169,9 @@ colors = ['#add8e6', '#4682b4', '#00008b']
 fig, axs = plt.subplots(1, 3, figsize=(18, 6))
 
 # Generate plots
-plot_results(axs[0], "market_share", "Market Share vs Efficiency Gains", "Market Share", (0, 0.8), firms, colors)
-plot_results(axs[1], "margin", "Margin vs Efficiency Gains", "Margin", (0, 0.6), firms, colors)
-plot_results(axs[2], "price_change", "Price Change vs Efficiency Gains", "Price Change", (-0.65, 0.65), firms, colors)
+plot_results(axs[0], "market_share", "Market Share vs Cost Change ", "Market Share", (0, 0.8), firms, colors)
+plot_results(axs[1], "margin", "Margin vs Cost Change", "Margin", (0, 0.6), firms, colors)
+plot_results(axs[2], "price_change", "Price Change vs Cost Change", "Price Change", (-0.65, 0.65), firms, colors)
 
 # Add legend
 fig.legend(labels=['Firm 1: Merged', 'Firm 2: Merged', 'Firm 3: Non-Merged'], loc='lower center', ncol=len(firms))
